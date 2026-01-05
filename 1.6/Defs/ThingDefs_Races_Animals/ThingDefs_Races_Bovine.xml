@@ -312,4 +312,489 @@
         </lifeStages>
     </PawnKindDef>
 
+    <!--___ Radstag ___-->
+
+    <!-- ThingDef -->
+
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>FCP_Animal_Radstag</defName>
+        <label>Radstag</label>
+        <devNote>Radstag - Two-headed mutant deer</devNote>
+        <description>A mutated two-headed deer, one of the more common creatures in the wasteland. Despite their unusual appearance, radstags are generally docile herbivores that travel in small herds. Their meat is edible and their hides make decent leather, though both carry traces of radiation.</description>
+        <statBases>
+            <MoveSpeed>5.5</MoveSpeed>
+            <MarketValue>250</MarketValue>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+            <ComfyTemperatureMax>40</ComfyTemperatureMax>
+            <FilthRate>4</FilthRate>
+            <ToxicEnvironmentResistance>0.80</ToxicEnvironmentResistance>
+            <Wildness>0.60</Wildness>
+        </statBases>
+        <tools>
+            <li>
+                <label>left hoof</label>
+                <labelNoLocation>hoof</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right hoof</label>
+                <labelNoLocation>hoof</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>left head</label>
+                <labelNoLocation>head</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.5</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <herdAnimal>true</herdAnimal>
+            <body>FCP_Body_Animal_Quadruped_Animal_With_Hooves_Two_Heads</body>
+            <baseBodySize>1.2</baseBodySize>
+            <baseHungerRate>0.45</baseHungerRate>
+            <baseHealthScale>1.1</baseHealthScale>
+            <foodType>VegetarianRoughAnimal</foodType>
+            <leatherDef>Leather_Plain</leatherDef>
+            <useMeatFrom>Deer</useMeatFrom>
+            <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>0.15</manhunterOnDamageChance>
+            <gestationPeriodDays>18</gestationPeriodDays>
+            <trainability>Intermediate</trainability>
+            <soundEating>Herbivore_Eat</soundEating>
+            <wildBiomes>
+                <TemperateForest>0.50</TemperateForest>
+                <BorealForest>0.35</BorealForest>
+                <AridShrubland>0.25</AridShrubland>
+                <TropicalRainforest>0.15</TropicalRainforest>
+                <TemperateSwamp>0.20</TemperateSwamp>
+            </wildBiomes>
+            <litterSizeCurve>
+                <points>
+                    <li>(0.5, 0)</li>
+                    <li>(1, 1)</li>
+                    <li>(2, 0.5)</li>
+                    <li>(2.5, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeExpectancy>12</lifeExpectancy>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.15</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.45</minAge>
+                    <soundWounded>Pawn_Deer_Wounded</soundWounded>
+                    <soundDeath>Pawn_Deer_Death</soundDeath>
+                    <soundCall>Pawn_Deer_Call</soundCall>
+                    <soundAngry>Pawn_Deer_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>FCP_Animal_Wild</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- PawnKind -->
+
+    <PawnKindDef ParentName="AnimalKindBase">
+        <defName>FCP_Animal_Radstag</defName>
+        <label>Radstag</label>
+        <race>FCP_Animal_Radstag</race>
+        <combatPower>60</combatPower>
+        <ecoSystemWeight>0.50</ecoSystemWeight>
+        <wildGroupSize>2~5</wildGroupSize>
+        <alternateGraphicChance>0.65</alternateGraphicChance>
+        <alternateGraphics>
+            <li><color>(0.57,0.47,0.35,1)</color></li>
+            <li><color>(0.49,0.41,0.29,1)</color></li>
+            <li><color>(0.63,0.53,0.39,1)</color></li>
+            <li><color>(0.43,0.35,0.25,1)</color></li>
+            <li><color>(0.53,0.45,0.33,1)</color></li>
+        </alternateGraphics>
+        <lifeStages>
+            <li>
+                <label>radstag fawn</label>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.1</drawSize>
+                    <color>(0.53,0.45,0.33)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.1</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.6</drawSize>
+                    <color>(0.53,0.45,0.33)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.6</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.9</drawSize>
+                    <color>(0.53,0.45,0.33)</color>
+                    <shadowData>
+                        <volume>(0.4, 0.5, 0.35)</volume>
+                        <offset>(0,0,-0.05)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.9</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!--___ Pale Radstag ___-->
+
+    <!-- ThingDef -->
+
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>FCP_Animal_Pale_Radstag</defName>
+        <label>Pale Radstag</label>
+        <devNote>Pale Radstag - Albino variant</devNote>
+        <description>A rare albino variant of the radstag, with pale white fur and lighter build. These creatures are less affected by radiation than their common cousins, making them slightly weaker but also less dangerous to handle. They're prized for their distinctive appearance.</description>
+        <statBases>
+            <MoveSpeed>5.8</MoveSpeed>
+            <MarketValue>280</MarketValue>
+            <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+            <ComfyTemperatureMax>35</ComfyTemperatureMax>
+            <FilthRate>3</FilthRate>
+            <ToxicEnvironmentResistance>0.60</ToxicEnvironmentResistance>
+            <Wildness>0.55</Wildness>
+        </statBases>
+        <tools>
+            <li>
+                <label>left hoof</label>
+                <labelNoLocation>hoof</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right hoof</label>
+                <labelNoLocation>hoof</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>left head</label>
+                <labelNoLocation>head</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.5</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <herdAnimal>true</herdAnimal>
+            <body>FCP_Body_Animal_Quadruped_Animal_With_Hooves_Two_Heads</body>
+            <baseBodySize>1.0</baseBodySize>
+            <baseHungerRate>0.40</baseHungerRate>
+            <baseHealthScale>0.9</baseHealthScale>
+            <foodType>VegetarianRoughAnimal</foodType>
+            <leatherDef>Leather_Plain</leatherDef>
+            <useMeatFrom>Deer</useMeatFrom>
+            <manhunterOnTameFailChance>0.03</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+            <trainability>Intermediate</trainability>
+            <soundEating>Herbivore_Eat</soundEating>
+            <wildBiomes>
+                <TemperateForest>0.15</TemperateForest>
+                <BorealForest>0.20</BorealForest>
+                <AridShrubland>0.08</AridShrubland>
+            </wildBiomes>
+            <lifeExpectancy>12</lifeExpectancy>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.15</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.45</minAge>
+                    <soundWounded>Pawn_Deer_Wounded</soundWounded>
+                    <soundDeath>Pawn_Deer_Death</soundDeath>
+                    <soundCall>Pawn_Deer_Call</soundCall>
+                    <soundAngry>Pawn_Deer_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>FCP_Animal_Wild</li>
+            <li>FCP_Animal_Rare</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- PawnKind -->
+
+    <PawnKindDef ParentName="AnimalKindBase">
+        <defName>FCP_Animal_Pale_Radstag</defName>
+        <label>Pale Radstag</label>
+        <race>FCP_Animal_Pale_Radstag</race>
+        <combatPower>45</combatPower>
+        <ecoSystemWeight>0.20</ecoSystemWeight>
+        <wildGroupSize>1~3</wildGroupSize>
+        <alternateGraphicChance>0.65</alternateGraphicChance>
+        <alternateGraphics>
+            <li><color>(0.92,0.90,0.88,1)</color></li>
+            <li><color>(0.96,0.94,0.92,1)</color></li>
+            <li><color>(0.88,0.85,0.82,1)</color></li>
+            <li><color>(0.94,0.92,0.89,1)</color></li>
+            <li><color>(0.90,0.88,0.85,1)</color></li>
+        </alternateGraphics>
+        <lifeStages>
+            <li>
+                <label>pale radstag fawn</label>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.0</drawSize>
+                    <color>(0.90,0.88,0.85)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.0</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.4</drawSize>
+                    <color>(0.90,0.88,0.85)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.4</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.65</drawSize>
+                    <color>(0.90,0.88,0.85)</color>
+                    <shadowData>
+                        <volume>(0.35, 0.45, 0.3)</volume>
+                        <offset>(0,0,-0.05)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.65</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!--___ Glowing Radstag ___-->
+
+    <!-- ThingDef -->
+
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>FCP_Animal_Glowing_Radstag</defName>
+        <label>Glowing Radstag</label>
+        <devNote>Glowing Radstag - Heavily irradiated variant</devNote>
+        <description>A heavily irradiated radstag that emits an eerie green glow. Prolonged exposure to radiation has made these creatures larger and more aggressive than normal radstags. Their meat is highly radioactive and dangerous to consume, but their glowing presence makes them easy to spot at night.</description>
+        <statBases>
+            <MoveSpeed>5.0</MoveSpeed>
+            <MarketValue>400</MarketValue>
+            <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <FilthRate>5</FilthRate>
+            <ToxicEnvironmentResistance>1.0</ToxicEnvironmentResistance>
+            <Wildness>0.70</Wildness>
+        </statBases>
+        <tools>
+            <li>
+                <label>left hoof</label>
+                <labelNoLocation>hoof</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right hoof</label>
+                <labelNoLocation>hoof</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>left head</label>
+                <labelNoLocation>head</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.5</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <herdAnimal>true</herdAnimal>
+            <body>FCP_Body_Animal_Quadruped_Animal_With_Hooves_Two_Heads</body>
+            <baseBodySize>1.4</baseBodySize>
+            <baseHungerRate>0.50</baseHungerRate>
+            <baseHealthScale>1.3</baseHealthScale>
+            <foodType>VegetarianRoughAnimal</foodType>
+            <leatherDef>Leather_Plain</leatherDef>
+            <useMeatFrom>Deer</useMeatFrom>
+            <manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
+            <trainability>Intermediate</trainability>
+            <soundEating>Herbivore_Eat</soundEating>
+            <wildBiomes>
+                <TemperateForest>0.08</TemperateForest>
+                <BorealForest>0.10</BorealForest>
+                <AridShrubland>0.05</AridShrubland>
+                <TropicalRainforest>0.03</TropicalRainforest>
+            </wildBiomes>
+            <lifeExpectancy>10</lifeExpectancy>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.15</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.45</minAge>
+                    <soundWounded>Pawn_Deer_Wounded</soundWounded>
+                    <soundDeath>Pawn_Deer_Death</soundDeath>
+                    <soundCall>Pawn_Deer_Call</soundCall>
+                    <soundAngry>Pawn_Deer_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>FCP_Animal_Wild</li>
+            <li>FCP_Animal_Dangerous</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- PawnKind -->
+
+    <PawnKindDef ParentName="AnimalKindBase">
+        <defName>FCP_Animal_Glowing_Radstag</defName>
+        <label>Glowing Radstag</label>
+        <race>FCP_Animal_Glowing_Radstag</race>
+        <combatPower>75</combatPower>
+        <ecoSystemWeight>0.15</ecoSystemWeight>
+        <wildGroupSize>1~2</wildGroupSize>
+        <alternateGraphicChance>0.65</alternateGraphicChance>
+        <alternateGraphics>
+            <li><color>(0.45,1.0,0.20,1)</color></li>
+            <li><color>(0.40,0.95,0.15,1)</color></li>
+            <li><color>(0.50,1.0,0.25,1)</color></li>
+            <li><color>(0.35,0.90,0.10,1)</color></li>
+            <li><color>(0.55,1.0,0.30,1)</color></li>
+        </alternateGraphics>
+        <lifeStages>
+            <li>
+                <label>glowing radstag fawn</label>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.2</drawSize>
+                    <color>(0.50,1.0,0.25)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.2</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>1.75</drawSize>
+                    <color>(0.50,1.0,0.25)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>1.75</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag</texPath>
+                    <drawSize>2.1</drawSize>
+                    <color>(0.50,1.0,0.25)</color>
+                    <shadowData>
+                        <volume>(0.45, 0.55, 0.4)</volume>
+                        <offset>(0,0,-0.05)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Rad_Stag/FCP_Rad_Stag_Dessicated</texPath>
+                    <drawSize>2.1</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
 </Defs>

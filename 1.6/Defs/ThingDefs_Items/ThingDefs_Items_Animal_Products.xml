@@ -489,4 +489,96 @@
         </comps>
     </ThingDef>
 
+    <!--___ Radroach Egg ___-->
+
+    <!-- Unfertilized -->
+
+    <ThingDef ParentName="EggUnfertBase">
+        <defName>FCP_Egg_Radroach_Unfertilized</defName>
+        <label>radroach egg (unfert.)</label>
+        <description>An unfertilized radroach egg. Small and unappetizing, but edible in a pinch. Radroaches lay eggs in large clusters.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+            <color>(105,90,70)</color>
+            <drawSize>0.3</drawSize>
+        </graphicData>
+        <stackLimit>50</stackLimit>
+        <statBases>
+            <MarketValue>2.0</MarketValue>
+            <Nutrition>0.10</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+        </statBases>
+    </ThingDef>
+
+    <!-- Fertilized -->
+
+    <ThingDef ParentName="EggFertBase">
+        <defName>FCP_Egg_Radroach_Fertilized</defName>
+        <label>radroach egg (fert.)</label>
+        <description>A fertilized radroach egg. If incubated, it will hatch into a radroach nymph. These pests breed rapidly, and their eggs are a common sight in infested areas.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+            <color>(105,90,70)</color>
+            <drawSize>0.3</drawSize>
+        </graphicData>
+        <stackLimit>50</stackLimit>
+        <statBases>
+            <MarketValue>4.0</MarketValue>
+            <Nutrition>0.10</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <comps>
+            <li Class="FCP.Core.CompProperties_HatcherCustom">
+                <hatcherDaystoHatch>3</hatcherDaystoHatch>
+                <hatcherPawn>FCP_Animal_Radroach</hatcherPawn>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--___ Thrasher Egg ___-->
+
+    <!-- Unfertilized -->
+
+    <ThingDef ParentName="EggUnfertBase">
+        <defName>FCP_Egg_Thrasher_Unfertilized</defName>
+        <label>thrasher egg (unfert.)</label>
+        <description>An unfertilized thrasher egg. Larger and more flavorful than pre-war turkey eggs, though some find the slightly irradiated taste off-putting. Still, it's a valuable food source in the wasteland.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+            <color>(195,175,145)</color>
+            <drawSize>0.65</drawSize>
+        </graphicData>
+        <stackLimit>25</stackLimit>
+        <statBases>
+            <MarketValue>18.0</MarketValue>
+            <Nutrition>0.4</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+        </statBases>
+    </ThingDef>
+
+    <!-- Fertilized -->
+
+    <ThingDef ParentName="EggFertBase">
+        <defName>FCP_Egg_Thrasher_Fertilized</defName>
+        <label>thrasher egg (fert.)</label>
+        <description>A fertilized thrasher egg. If properly incubated, it will hatch into an aggressive rad turkey. While they can be domesticated, their temperamental nature makes them dangerous livestock.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+            <color>(195,175,145)</color>
+            <drawSize>0.65</drawSize>
+        </graphicData>
+        <stackLimit>25</stackLimit>
+        <statBases>
+            <MarketValue>35.0</MarketValue>
+            <Nutrition>0.4</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <comps>
+            <li Class="FCP.Core.CompProperties_HatcherCustom">
+                <hatcherDaystoHatch>5</hatcherDaystoHatch>
+                <hatcherPawn>FCP_Animal_Thrasher</hatcherPawn>
+            </li>
+        </comps>
+    </ThingDef>
+
 </Defs>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ FCP Animals __________-->
+
+    <!--_____ Insects _____-->
+
+    <!--___ Radroach ___-->
+
+    <!-- ThingDef -->
+
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>FCP_Animal_Radroach</defName>
+        <label>radroach</label>
+        <description>A mutated cockroach, grown to enormous size by radiation exposure. Radroaches are highly adaptive pests that can survive in nearly any environment. While individually weak, they reproduce rapidly and can swarm unwary victims. Their meat is edible, though not particularly appetizing.</description>
+        <statBases>
+            <MoveSpeed>4.2</MoveSpeed>
+            <MarketValue>35</MarketValue>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>60</ComfyTemperatureMax>
+            <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+            <ToxicResistance>0.8</ToxicResistance>
+            <LeatherAmount>0</LeatherAmount>
+            <Wildness>0.25</Wildness>
+        </statBases>
+        <uiIconScale>1.5</uiIconScale>
+        <tools>
+            <li>
+                <label>mandibles</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.1</chanceFactor>
+            </li>
+        </tools>
+        <comps>
+            <li Class="CompProperties_EggLayer">
+                <eggUnfertilizedDef>FCP_Egg_Radroach_Unfertilized</eggUnfertilizedDef>
+                <eggFertilizedDef>FCP_Egg_Radroach_Fertilized</eggFertilizedDef>
+                <eggFertilizationCountMax>4</eggFertilizationCountMax>
+                <eggLayIntervalDays>5</eggLayIntervalDays>
+                <eggCountRange>3~6</eggCountRange>
+            </li>
+        </comps>
+        <race>
+            <thinkTreeMain>Animal</thinkTreeMain>
+            <body>BeetleLike</body>
+            <baseBodySize>0.08</baseBodySize>
+            <baseHungerRate>0.08</baseHungerRate>
+            <baseHealthScale>0.3</baseHealthScale>
+            <fleshType>Insectoid</fleshType>
+            <bloodDef>Filth_BloodInsect</bloodDef>
+            <meatColor>(160,168,139)</meatColor>
+            <meatMarketValue>0.4</meatMarketValue>
+            <meatLabel>radroach meat</meatLabel>
+            <useMeatFrom>Megaspider</useMeatFrom>
+            <foodType>OmnivoreAnimal</foodType>
+            <lifeExpectancy>3</lifeExpectancy>
+            <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>
+            <trainability>None</trainability>
+            <canBeVacuumBurnt>false</canBeVacuumBurnt>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.05</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.15</minAge>
+                    <soundWounded>Pawn_BigInsect_Pain</soundWounded>
+                    <soundDeath>Pawn_BigInsect_Death</soundDeath>
+                    <soundCall>Pawn_BigInsect_Call</soundCall>
+                    <soundAngry>Pawn_BigInsect_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>FCP_Animal_Common</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- PawnKind -->
+
+    <PawnKindDef ParentName="AnimalKindBase">
+        <defName>FCP_Animal_Radroach</defName>
+        <label>radroach</label>
+        <race>FCP_Animal_Radroach</race>
+        <combatPower>15</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
+        <ecoSystemWeight>0.25</ecoSystemWeight>
+        <wildGroupSize>
+            <min>2</min>
+            <max>5</max>
+        </wildGroupSize>
+        <alternateGraphicChance>0.6</alternateGraphicChance>
+        <alternateGraphics>
+            <li><color>(0.55,0.45,0.35,1)</color></li>
+            <li><color>(0.40,0.35,0.25,1)</color></li>
+            <li><color>(0.50,0.40,0.30,1)</color></li>
+            <li><color>(0.45,0.40,0.30,1)</color></li>
+        </alternateGraphics>
+        <lifeStages>
+            <li>
+                <label>radroach nymph</label>
+                <labelPlural>radroach nymphs</labelPlural>
+                <bodyGraphicData>
+                    <texPath>Animals/Radroach/Radroach/FCP_Radroach</texPath>
+                    <drawSize>0.4</drawSize>
+                    <color>(0.60,0.50,0.40)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Radroach/FCP_Desiccated_Radroach</texPath>
+                    <drawSize>0.4</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Radroach/Radroach/FCP_Radroach</texPath>
+                    <drawSize>0.65</drawSize>
+                    <color>(0.60,0.50,0.40)</color>
+                    <shadowData>
+                        <volume>(0.2, 0.3, 0.2)</volume>
+                        <offset>(0,0,-0.1)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Radroach/FCP_Desiccated_Radroach</texPath>
+                    <drawSize>0.65</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Radroach/Radroach/FCP_Radroach</texPath>
+                    <drawSize>0.85</drawSize>
+                    <color>(0.60,0.50,0.40)</color>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.1)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Radroach/FCP_Desiccated_Radroach</texPath>
+                    <drawSize>0.85</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!--___ Glowing Radroach ___-->
+
+    <!-- ThingDef -->
+
+    <ThingDef ParentName="AnimalThingBase">
+        <defName>FCP_Animal_Glowing_Radroach</defName>
+        <label>glowing radroach</label>
+        <description>A radroach that has absorbed extreme amounts of radiation, causing it to emit an eerie green glow. These mutants are more aggressive than their common cousins and their bodies are saturated with radioactive isotopes. Exposure to them can be hazardous, but their glowing carapaces have some value to certain traders.</description>
+        <statBases>
+            <MoveSpeed>4.0</MoveSpeed>
+            <MarketValue>80</MarketValue>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>60</ComfyTemperatureMax>
+            <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.18</ArmorRating_Sharp>
+            <ToxicResistance>1.0</ToxicResistance>
+            <LeatherAmount>0</LeatherAmount>
+            <Wildness>0.35</Wildness>
+        </statBases>
+        <uiIconScale>1.5</uiIconScale>
+        <tools>
+            <li>
+                <label>mandibles</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.1</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <thinkTreeMain>Animal</thinkTreeMain>
+            <body>BeetleLike</body>
+            <baseBodySize>0.10</baseBodySize>
+            <baseHungerRate>0.10</baseHungerRate>
+            <baseHealthScale>0.4</baseHealthScale>
+            <fleshType>Insectoid</fleshType>
+            <bloodDef>Filth_BloodInsect</bloodDef>
+            <meatColor>(160,255,160)</meatColor>
+            <meatMarketValue>0.3</meatMarketValue>
+            <meatLabel>glowing radroach meat</meatLabel>
+            <useMeatFrom>Megaspider</useMeatFrom>
+            <foodType>OmnivoreAnimal</foodType>
+            <lifeExpectancy>4</lifeExpectancy>
+            <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+            <trainability>None</trainability>
+            <canBeVacuumBurnt>false</canBeVacuumBurnt>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.05</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.2</minAge>
+                    <soundWounded>Pawn_BigInsect_Pain</soundWounded>
+                    <soundDeath>Pawn_BigInsect_Death</soundDeath>
+                    <soundCall>Pawn_BigInsect_Call</soundCall>
+                    <soundAngry>Pawn_BigInsect_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+            <wildBiomes>
+                <TemperateForest>0.12</TemperateForest>
+                <BorealForest>0.10</BorealForest>
+                <AridShrubland>0.15</AridShrubland>
+                <Desert>0.10</Desert>
+                <ExtremeDesert>0.08</ExtremeDesert>
+                <TropicalRainforest>0.10</TropicalRainforest>
+                <TropicalSwamp>0.12</TropicalSwamp>
+                <TemperateSwamp>0.15</TemperateSwamp>
+            </wildBiomes>
+        </race>
+        <tradeTags>
+            <li>FCP_Animal_Uncommon</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- PawnKind -->
+
+    <PawnKindDef ParentName="AnimalKindBase">
+        <defName>FCP_Animal_Glowing_Radroach</defName>
+        <label>glowing radroach</label>
+        <race>FCP_Animal_Glowing_Radroach</race>
+        <combatPower>25</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
+        <ecoSystemWeight>0.20</ecoSystemWeight>
+        <wildGroupSize>
+            <min>1</min>
+            <max>3</max>
+        </wildGroupSize>
+        <lifeStages>
+            <li>
+                <label>glowing radroach nymph</label>
+                <labelPlural>glowing radroach nymphs</labelPlural>
+                <bodyGraphicData>
+                    <texPath>Animals/Radroach/Glowing_Radroach/FCP_Glowing_Radroach</texPath>
+                    <drawSize>0.5</drawSize>
+                    <color>(0.90,1.00,0.90)</color>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Radroach/FCP_Desiccated_Radroach</texPath>
+                    <drawSize>0.5</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Radroach/Glowing_Radroach/FCP_Glowing_Radroach</texPath>
+                    <drawSize>0.75</drawSize>
+                    <color>(0.90,1.00,0.90)</color>
+                    <shadowData>
+                        <volume>(0.2, 0.3, 0.2)</volume>
+                        <offset>(0,0,-0.1)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Radroach/FCP_Desiccated_Radroach</texPath>
+                    <drawSize>0.75</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Animals/Radroach/Glowing_Radroach/FCP_Glowing_Radroach</texPath>
+                    <drawSize>0.95</drawSize>
+                    <color>(0.90,1.00,0.90)</color>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.1)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Animals/Radroach/FCP_Desiccated_Radroach</texPath>
+                    <drawSize>0.95</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+</Defs>
