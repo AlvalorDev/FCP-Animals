@@ -187,7 +187,7 @@
         <defName>FCP_Animal_Rad_Raven</defName>
         <label>Rad Raven</label>
         <devNote>Rad Raven</devNote>
-        <description>.</description>
+        <description>A clever and opportunistic scavenger that has thrived in the wasteland. These large black birds are known for their intelligence and adaptability, often following travelers and raiders to feed on carrion. While they prefer scavenging, rad ravens are capable predators that hunt small creatures. They can be trained to a useful degree, making them valuable companions for wasteland scouts.</description>
         <statBases>
             <MoveSpeed>4</MoveSpeed>
             <MarketValue>100</MarketValue>
@@ -386,7 +386,7 @@
         <defName>FCP_Animal_Radgull</defName>
         <label>Radgull</label>
         <devNote>Radgull</devNote>
-        <description>.</description>
+        <description>A hardy seabird that has adapted remarkably well to the irradiated coasts of the wasteland. These gregarious birds travel in large flocks, their distinctive calls echoing across contaminated shorelines. Radgulls are highly resistant to radiation and can eat almost anything, making them successful scavengers. They're commonly found along coastal areas where they dive for mutated fish and pick through debris. With intermediate intelligence, they can be trained for various tasks.</description>
         <modExtensions>
             <li Class="FCP.Core.ModExtension_BiomeFeatureRequirements">
                 <requireCoast>True</requireCoast>

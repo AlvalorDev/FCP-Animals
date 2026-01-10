@@ -142,23 +142,12 @@
         <combatPower>150</combatPower>
         <ecoSystemWeight>0.40</ecoSystemWeight>
         <wildGroupSize>1~2</wildGroupSize>
-        <alternateGraphicChance>0.65</alternateGraphicChance>
-        <alternateGraphics>
-            <li><color>(0.35,0.30,0.25,1)</color><colorTwo>(0.55,0.48,0.40,1)</colorTwo></li>
-            <li><color>(0.45,0.38,0.28,1)</color><colorTwo>(0.65,0.55,0.45,1)</colorTwo></li>
-            <li><color>(0.30,0.28,0.24,1)</color><colorTwo>(0.50,0.45,0.38,1)</colorTwo></li>
-            <li><color>(0.40,0.35,0.26,1)</color><colorTwo>(0.60,0.52,0.42,1)</colorTwo></li>
-            <li><color>(0.38,0.33,0.27,1)</color><colorTwo>(0.58,0.50,0.41,1)</colorTwo></li>
-        </alternateGraphics>
         <lifeStages>
             <li>
                 <label>yao guai cub</label>
                 <bodyGraphicData>
                     <texPath>Animals/Yao_Guai/FCP_Yao_Guai</texPath>
                     <drawSize>1.5</drawSize>
-                    <color>(0.38,0.33,0.27)</color>
-                    <colorTwo>(0.58,0.50,0.41)</colorTwo>
-                    <shaderType>CutoutComplex</shaderType>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
                     <texPath>Animals/Yao_Guai/FCP_Yao_Guai_Dessicated</texPath>
@@ -169,9 +158,6 @@
                 <bodyGraphicData>
                     <texPath>Animals/Yao_Guai/FCP_Yao_Guai</texPath>
                     <drawSize>2.2</drawSize>
-                    <color>(0.38,0.33,0.27)</color>
-                    <colorTwo>(0.58,0.50,0.41)</colorTwo>
-                    <shaderType>CutoutComplex</shaderType>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
                     <texPath>Animals/Yao_Guai/FCP_Yao_Guai_Dessicated</texPath>
@@ -182,9 +168,6 @@
                 <bodyGraphicData>
                     <texPath>Animals/Yao_Guai/FCP_Yao_Guai</texPath>
                     <drawSize>2.7</drawSize>
-                    <color>(0.38,0.33,0.27)</color>
-                    <colorTwo>(0.58,0.50,0.41)</colorTwo>
-                    <shaderType>CutoutComplex</shaderType>
                     <shadowData>
                         <volume>(0.6, 0.7, 0.55)</volume>
                         <offset>(0,0,-0.1)</offset>
@@ -196,189 +179,11 @@
                 </dessicatedBodyGraphicData>
             </li>
         </lifeStages>
-    </PawnKindDef>
-
-    <!--___ Glowing Yao Guai ___-->
-
-    <!-- ThingDef -->
-
-    <ThingDef ParentName="AnimalThingBase">
-        <defName>FCP_Animal_Glowing_Yao_Guai</defName>
-        <label>Glowing Yao Guai</label>
-        <devNote>Glowing Yao Guai - Heavily irradiated variant</devNote>
-        <description>A heavily irradiated Yao Guai that emits an eerie green glow. The intense radiation has made this already formidable predator even larger and more aggressive. These rare creatures are death incarnate, feared even by the most hardened wasteland survivors. Their meat is highly radioactive and their hide glows in the dark.</description>
-        <statBases>
-            <MoveSpeed>5.8</MoveSpeed>
-            <MarketValue>1200</MarketValue>
-            <ComfyTemperatureMin>-50</ComfyTemperatureMin>
-            <ComfyTemperatureMax>60</ComfyTemperatureMax>
-            <FilthRate>10</FilthRate>
-            <ToxicEnvironmentResistance>1.0</ToxicEnvironmentResistance>
-            <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-            <Wildness>0.98</Wildness>
-        </statBases>
-        <tools>
+        <startingHediffs>
             <li>
-                <label>left claw</label>
-                <labelNoLocation>claw</labelNoLocation>
-                <capacities>
-                    <li>Cut</li>
-                </capacities>
-                <power>26.0</power>
-                <cooldownTime>2</cooldownTime>
-                <armorPenetration>0.40</armorPenetration>
-                <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+                <def>FCP_Hediff_Spawn_Hostile_Animal</def>
             </li>
-            <li>
-                <label>right claw</label>
-                <labelNoLocation>claw</labelNoLocation>
-                <capacities>
-                    <li>Cut</li>
-                </capacities>
-                <power>26.0</power>
-                <cooldownTime>2</cooldownTime>
-                <armorPenetration>0.40</armorPenetration>
-                <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
-            </li>
-            <li>
-                <capacities>
-                    <li>Bite</li>
-                </capacities>
-                <power>24.0</power>
-                <cooldownTime>2.6</cooldownTime>
-                <armorPenetration>0.30</armorPenetration>
-                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-                <chanceFactor>0.7</chanceFactor>
-            </li>
-            <li>
-                <label>head</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>14</power>
-                <cooldownTime>2</cooldownTime>
-                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-                <chanceFactor>0.2</chanceFactor>
-            </li>
-        </tools>
-        <race>
-            <body>QuadrupedAnimalWithClawsTailAndJowl</body>
-            <baseBodySize>2.3</baseBodySize>
-            <baseHungerRate>1.1</baseHungerRate>
-            <baseHealthScale>3.2</baseHealthScale>
-            <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
-            <leatherDef>Leather_Bear</leatherDef>
-            <specificMeatDef>FCP_Meat_Prime_Beast</specificMeatDef>
-            <nameOnTameChance>1</nameOnTameChance>
-            <trainability>Advanced</trainability>
-            <manhunterOnTameFailChance>0.95</manhunterOnTameFailChance>
-            <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
-            <predator>true</predator>
-            <maxPreyBodySize>3.0</maxPreyBodySize>
-            <canBePredatorPrey>false</canBePredatorPrey>
-            <petness>0.02</petness>
-            <soundEating>PredatorLarge_Eat</soundEating>
-            <wildBiomes>
-                <TemperateForest>0.08</TemperateForest>
-                <BorealForest>0.10</BorealForest>
-                <TropicalRainforest>0.05</TropicalRainforest>
-                <AridShrubland>0.03</AridShrubland>
-            </wildBiomes>
-            <lifeExpectancy>18</lifeExpectancy>
-            <lifeStageAges>
-                <li>
-                    <def>AnimalBaby</def>
-                    <minAge>0</minAge>
-                </li>
-                <li>
-                    <def>AnimalJuvenile</def>
-                    <minAge>0.25</minAge>
-                </li>
-                <li>
-                    <def>AnimalAdult</def>
-                    <minAge>1.0</minAge>
-                    <soundWounded>Pawn_Bear_Injured</soundWounded>
-                    <soundDeath>Pawn_Bear_Death</soundDeath>
-                    <soundCall>Pawn_Bear_Call</soundCall>
-                    <soundAngry>Pawn_Bear_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
-            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-        </race>
-        <tradeTags>
-            <li>FCP_Animal_Wild</li>
-            <li>FCP_Animal_Dangerous</li>
-            <li>FCP_Animal_Rare</li>
-        </tradeTags>
-    </ThingDef>
-
-    <!-- PawnKind -->
-
-    <PawnKindDef ParentName="AnimalKindBase">
-        <defName>FCP_Animal_Glowing_Yao_Guai</defName>
-        <label>Glowing Yao Guai</label>
-        <race>FCP_Animal_Glowing_Yao_Guai</race>
-        <combatPower>185</combatPower>
-        <ecoSystemWeight>0.10</ecoSystemWeight>
-        <wildGroupSize>1</wildGroupSize>
-        <alternateGraphicChance>0.65</alternateGraphicChance>
-        <alternateGraphics>
-            <li><color>(0.35,0.75,0.20,1)</color><colorTwo>(0.60,1.0,0.55,1)</colorTwo></li>
-            <li><color>(0.30,0.70,0.15,1)</color><colorTwo>(0.55,0.95,0.50,1)</colorTwo></li>
-            <li><color>(0.40,0.80,0.25,1)</color><colorTwo>(0.65,1.0,0.60,1)</colorTwo></li>
-            <li><color>(0.25,0.65,0.10,1)</color><colorTwo>(0.50,0.90,0.45,1)</colorTwo></li>
-            <li><color>(0.38,0.78,0.22,1)</color><colorTwo>(0.63,0.98,0.58,1)</colorTwo></li>
-        </alternateGraphics>
-        <lifeStages>
-            <li>
-                <label>glowing yao guai cub</label>
-                <bodyGraphicData>
-                    <texPath>Animals/Yao_Guai/FCP_Yao_Guai</texPath>
-                    <drawSize>1.7</drawSize>
-                    <color>(0.35,0.75,0.20)</color>
-                    <colorTwo>(0.60,1.0,0.55)</colorTwo>
-                    <shaderType>CutoutComplex</shaderType>
-                </bodyGraphicData>
-                <dessicatedBodyGraphicData>
-                    <texPath>Animals/Yao_Guai/FCP_Yao_Guai_Dessicated</texPath>
-                    <drawSize>1.7</drawSize>
-                </dessicatedBodyGraphicData>
-            </li>
-            <li>
-                <bodyGraphicData>
-                    <texPath>Animals/Yao_Guai/FCP_Yao_Guai</texPath>
-                    <drawSize>2.5</drawSize>
-                    <color>(0.35,0.75,0.20)</color>
-                    <colorTwo>(0.60,1.0,0.55)</colorTwo>
-                    <shaderType>CutoutComplex</shaderType>
-                </bodyGraphicData>
-                <dessicatedBodyGraphicData>
-                    <texPath>Animals/Yao_Guai/FCP_Yao_Guai_Dessicated</texPath>
-                    <drawSize>2.5</drawSize>
-                </dessicatedBodyGraphicData>
-            </li>
-            <li>
-                <bodyGraphicData>
-                    <texPath>Animals/Yao_Guai/FCP_Yao_Guai</texPath>
-                    <drawSize>3.0</drawSize>
-                    <color>(0.35,0.75,0.20)</color>
-                    <colorTwo>(0.60,1.0,0.55)</colorTwo>
-                    <shaderType>CutoutComplex</shaderType>
-                    <shadowData>
-                        <volume>(0.7, 0.8, 0.6)</volume>
-                        <offset>(0,0,-0.1)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-                <dessicatedBodyGraphicData>
-                    <texPath>Animals/Yao_Guai/FCP_Yao_Guai_Dessicated</texPath>
-                    <drawSize>3.0</drawSize>
-                </dessicatedBodyGraphicData>
-            </li>
-        </lifeStages>
+        </startingHediffs>
     </PawnKindDef>
 
 </Defs>

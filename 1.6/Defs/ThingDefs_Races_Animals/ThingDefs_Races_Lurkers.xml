@@ -207,6 +207,11 @@
         <defName>FCP_Animal_Beachlurk</defName>
         <label>Beachlurk</label>
         <description>A coastal variant of the mirelurk that has adapted to sandy beach environments. These creatures have lighter-colored shells that blend with beach sand, making them harder to spot until they emerge from the surf. Beachlurks are slightly more aggressive than their swamp-dwelling cousins and often bury themselves in sand to ambush prey.</description>
+        <modExtensions>
+            <li Class="FCP.Core.ModExtension_BiomeFeatureRequirements">
+                <requireCoast>True</requireCoast>
+            </li>
+        </modExtensions>
         <statBases>
             <MoveSpeed>2.8</MoveSpeed>
             <MarketValue>450</MarketValue>

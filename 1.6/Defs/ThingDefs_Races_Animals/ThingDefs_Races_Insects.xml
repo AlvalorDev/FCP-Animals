@@ -64,7 +64,6 @@
             <baseHealthScale>0.3</baseHealthScale>
             <fleshType>Insectoid</fleshType>
             <bloodDef>Filth_BloodInsect</bloodDef>
-            <meatColor>(160,168,139)</meatColor>
             <meatMarketValue>0.4</meatMarketValue>
             <meatLabel>radroach meat</meatLabel>
             <specificMeatDef>FCP_Meat_Bug</specificMeatDef>
@@ -218,7 +217,6 @@
             <baseHealthScale>0.4</baseHealthScale>
             <fleshType>Insectoid</fleshType>
             <bloodDef>Filth_BloodInsect</bloodDef>
-            <meatColor>(160,255,160)</meatColor>
             <meatMarketValue>0.3</meatMarketValue>
             <meatLabel>glowing radroach meat</meatLabel>
             <specificMeatDef>FCP_Meat_Plumb_Bug</specificMeatDef>
@@ -410,7 +408,6 @@
             <baseHealthScale>1.0</baseHealthScale>
             <fleshType>Insectoid</fleshType>
             <bloodDef>Filth_BloodInsect</bloodDef>
-            <meatColor>(168,155,140)</meatColor>
             <meatMarketValue>0.6</meatMarketValue>
             <meatLabel>giant mantis meat</meatLabel>
             <specificMeatDef>FCP_Meat_Plumb_Bug</specificMeatDef>
