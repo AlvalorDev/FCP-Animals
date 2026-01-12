@@ -59,7 +59,7 @@
                         <li Class="ThinkNode_Priority">
                             <subNodes>
                                 <li Class="JobGiver_Berserk">
-                                    <maxAttackDistance>10</maxAttackDistance>
+                                    <maxAttackDistance>20</maxAttackDistance>
                                 </li>
                                 <li Class="JobGiver_WanderAnywhere">
                                     <maxDanger>Deadly</maxDanger>

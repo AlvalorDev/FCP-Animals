@@ -140,7 +140,7 @@
                     <drawSize>0.8</drawSize>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.5</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -154,7 +154,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.75</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -168,7 +168,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>1.0</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -258,7 +258,7 @@
                     <drawSize>0.8</drawSize>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.55</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -272,7 +272,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.85</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -286,7 +286,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>1.15</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -378,7 +378,7 @@
                     <drawSize>0.8</drawSize>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.52</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -392,7 +392,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.8</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -406,7 +406,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>1.08</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -503,7 +503,7 @@
                     <drawSize>0.8</drawSize>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.6</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -517,7 +517,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>0.95</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -531,7 +531,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Gecko/Gecko/Dessicated_FCP_Gecko</texPath>
+                    <texPath>Animals/Gecko/Dessicated_FCP_Gecko_east</texPath>
                     <drawSize>1.25</drawSize>
                 </dessicatedBodyGraphicData>
             </li>

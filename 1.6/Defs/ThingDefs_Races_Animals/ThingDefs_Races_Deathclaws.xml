@@ -282,7 +282,7 @@
                     <drawSize>1.5</drawSize>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated</texPath>
+                    <texPath>Animals/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated_east</texPath>
                     <drawSize>1.5</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -298,7 +298,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Things/Pawn/Animal/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated</texPath>
+                    <texPath>Things/Pawn/Animal/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated_east</texPath>
                     <drawSize>2.2</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -312,7 +312,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Deathclaw/Deathclaw/FCP_Deathclaw_Dessicated</texPath>
+                    <texPath>Animals/Deathclaw/Deathclaw/FCP_Deathclaw_Dessicated_east</texPath>
                     <drawSize>3.0</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -366,7 +366,7 @@
                     <drawSize>1.5</drawSize>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated</texPath>
+                    <texPath>Animals/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated_east</texPath>
                     <drawSize>1.5</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -382,7 +382,7 @@
                     </shadowData>
                 </bodyGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated</texPath>
+                    <texPath>Animals/Deathclaw/Juvenile/FCP_Juvenile_Deathclaw_Dessicated_east</texPath>
                     <drawSize>2.2</drawSize>
                 </dessicatedBodyGraphicData>
             </li>
@@ -404,11 +404,11 @@
                     </shadowData>
                 </femaleGraphicData>
                 <dessicatedBodyGraphicData>
-                    <texPath>Animals/Deathclaw/Deathclaw/FCP_Alpha_Deathclaw_Dessicated</texPath>
+                    <texPath>Animals/Deathclaw/Alpha/FCP_Alpha_Deathclaw_Dessicated_east</texPath>
                     <drawSize>3.5</drawSize>
                 </dessicatedBodyGraphicData>
                 <femaleDessicatedBodyGraphicData>
-                    <texPath>Animals/Deathclaw/Mother/FCP_Mother_Deathclaw_Dessicated</texPath>
+                    <texPath>Animals/Deathclaw/Mother/FCP_Mother_Deathclaw_Dessicated_east</texPath>
                     <drawSize>3.2</drawSize>
                 </femaleDessicatedBodyGraphicData>
             </li>
