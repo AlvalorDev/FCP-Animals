@@ -875,6 +875,7 @@
         <label>Lakelurk King</label>
         <race>FCP_Animal_Lakelurk_King</race>
         <combatPower>120</combatPower>
+        <fixedGender>Male</fixedGender>
         <canArriveManhunter>true</canArriveManhunter>
         <ecoSystemWeight>1.2</ecoSystemWeight>
         <wildGroupSize>
@@ -1030,6 +1031,7 @@
         <label>Mirelurk King</label>
         <race>FCP_Animal_Mirelurk_King</race>
         <combatPower>200</combatPower>
+        <fixedGender>Male</fixedGender>
         <canArriveManhunter>true</canArriveManhunter>
         <ecoSystemWeight>1.2</ecoSystemWeight>
         <wildGroupSize>
