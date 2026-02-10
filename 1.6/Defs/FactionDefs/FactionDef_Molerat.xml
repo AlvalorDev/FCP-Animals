@@ -52,6 +52,11 @@
         <allowedArrivalTemperatureRange>-20~50</allowedArrivalTemperatureRange>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
         <configurationListOrderPriority>999</configurationListOrderPriority>
+        <modExtensions>
+            <li Class="FCP.Factions.FactionExtension_FactionTabLabelOverride">
+                <newLabel>Vermin Colony</newLabel>
+            </li>
+        </modExtensions>
     </FactionDef>
 
 </Defs>
